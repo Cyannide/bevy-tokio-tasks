@@ -45,7 +45,7 @@ impl Default for TokioTasksPlugin {
     /// Configures the plugin to build a new Tokio [`Runtime`] with both IO and timer functionality
     /// enabled. On the wasm32 architecture, the [`Runtime`] will be the current-thread runtime, on all other
     /// architectures the [`Runtime`] will be the multi-thread runtime.
-    /// 
+    ///
     /// The default schedule label is [`Update`].
     fn default() -> Self {
         Self {
@@ -59,7 +59,7 @@ impl Default for TokioTasksPlugin {
                     .build()
                     .expect("Failed to create Tokio runtime for background tasks")
             }),
-            schedule_label: Update.intern()
+            schedule_label: Update.intern(),
         }
     }
 }
